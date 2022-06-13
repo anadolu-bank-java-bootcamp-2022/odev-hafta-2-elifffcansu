@@ -43,11 +43,20 @@ public class PlayWorldOfMagic implements CommandLineRunner {
 		
 		int spellsUsed = 0;
 		// ______ BASLANGIC _______ Kodunuz buradan baslamali
-		
+		for(int i=0;i<3;i++){
+				for(int j=0;j<3;j++){
+	    			if(bossHPs[i]%spellDamageInfo[j]==0){
+						bossHPs[i]-=spellDamageInfo[i];
+						spellsUsed++;
+					}
+				
+				}
+		}
 		// ______ SON _______ Kodunuz burada bitmeli
 		/* NOT: ______ BASLANGIC _______ ve ______ SON _______ 
 		 * arasina istediginiz kadar sayida satir ekleyebilirsiniz.
 		 */
+		
 		return spellsUsed;
 	}
 	
