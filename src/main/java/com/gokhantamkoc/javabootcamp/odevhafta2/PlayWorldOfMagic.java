@@ -46,12 +46,12 @@ public class PlayWorldOfMagic implements CommandLineRunner {
 	
 		for(int i=0;i<3;i++){
 				for(int j=0;j<3;j++){
+					if(bossHPs[i]<=0){
+						continue;
+					}
 						bossHPs[i]-=spellDamageInfo[j];
 						spellsUsed++;
 						System.out.println("bosshps : "+bossHPs[i]);
-						if(bossHPs[i]<=0){
-							continue;
-						}
 						System.out.println("i : "+i);	
 				}
 				System.out.println("spellUsed : "+spellsUsed);
