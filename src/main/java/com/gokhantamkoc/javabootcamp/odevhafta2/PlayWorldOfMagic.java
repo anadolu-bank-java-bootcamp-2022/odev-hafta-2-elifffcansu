@@ -45,13 +45,22 @@ public class PlayWorldOfMagic implements CommandLineRunner {
 		// ______ BASLANGIC _______ Kodunuz buradan baslamali
 		for(int i=0;i<3;i++){
 				for(int j=0;j<3;j++){
-	    			if(bossHPs[i]%spellDamageInfo[j]==0){
-						bossHPs[i]-=spellDamageInfo[i];
+						bossHPs[i]-=spellDamageInfo[j];
 						spellsUsed++;
-					}
-				
+						//System.out.println("bosshps : "+bossHPs[i]);
+						if(bossHPs[i]<=0){
+							continue;
+						}
+						
+						//System.out.println("i : "+i);
+						
+						
 				}
+
+				//System.out.println("spellUsed : "+spellsUsed);
+				
 		}
+		
 		// ______ SON _______ Kodunuz burada bitmeli
 		/* NOT: ______ BASLANGIC _______ ve ______ SON _______ 
 		 * arasina istediginiz kadar sayida satir ekleyebilirsiniz.
